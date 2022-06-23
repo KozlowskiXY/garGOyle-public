@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Asteroid
+  - Goldsack
+  - Stone
+  - Rocket
+  - MiniBossPickup
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Background Image
+  - Water
+  - UI
+  - Asteroids
+  - Rockets
+  - ChargedRockets
+  - WaterAsteroid
+  - Coins
+  - WaterBar
+  - WaterInWaterBar
+  - HealthPickup
+  - WaterParticlesInWaterBar
+  - ExplosionPaticle
+  - Goldsack
+  - ThrownGoldsack
+  - MiniBossPickup
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 2508442671
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Boss
+    uniqueID: 2544689415
+    locked: 0
+  - name: UI
+    uniqueID: 235897363
+    locked: 0

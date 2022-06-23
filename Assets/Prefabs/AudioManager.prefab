@@ -1,0 +1,238 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5147122862697076997
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5147122862697076999}
+  - component: {fileID: 5147122862697076996}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5147122862697076999
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5147122862697076997}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5147122862697076996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5147122862697076997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20c79749684ec441e83c99579495f069, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audios:
+  - name: GargoyleDeath
+    clip: {fileID: 8300000, guid: e6027a432c46e46bd8c6027811bb76b6, type: 3}
+    volume: 0.226
+    loop: 0
+    source: {fileID: 0}
+  - name: player-death
+    clip: {fileID: 8300000, guid: ec1300c27a9414684a84d456803a740a, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: player-hit
+    clip: {fileID: 8300000, guid: e3a5409dc839440f6b7f968e10f4bb30, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: player-hit2
+    clip: {fileID: 8300000, guid: 1ccc8c1f5048c4e5b864306cef868c82, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: player-shoot-fail
+    clip: {fileID: 8300000, guid: 1fcb7269f4711445c9faecaf8d499e7d, type: 3}
+    volume: 0.377
+    loop: 0
+    source: {fileID: 0}
+  - name: player-shoot
+    clip: {fileID: 8300000, guid: 7cf01323bc7114e069c668c345bf3d08, type: 3}
+    volume: 0.529
+    loop: 0
+    source: {fileID: 0}
+  - name: music-level1
+    clip: {fileID: 8300000, guid: 749309fc70b994b3281a2c0616910cb7, type: 3}
+    volume: 0.374
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleMusic1a
+    clip: {fileID: 8300000, guid: f0bf25aa68de747ed93e108cabb5f08a, type: 3}
+    volume: 0.101
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleMusic1b
+    clip: {fileID: 8300000, guid: f0bf25aa68de747ed93e108cabb5f08a, type: 3}
+    volume: 0.108
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleMusic2a
+    clip: {fileID: 8300000, guid: 1491094601f0044bd82e40ac664f8e9e, type: 3}
+    volume: 0.05
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleMusic2b
+    clip: {fileID: 8300000, guid: 1491094601f0044bd82e40ac664f8e9e, type: 3}
+    volume: 0.05
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleMusic3a
+    clip: {fileID: 8300000, guid: 9e95fc15530164701a42e214dd847e0e, type: 3}
+    volume: 0.04
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleMusic3b
+    clip: {fileID: 8300000, guid: 9e95fc15530164701a42e214dd847e0e, type: 3}
+    volume: 0.04
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleMusic0a
+    clip: {fileID: 8300000, guid: 5d0391b71edc64c619cd07bc78092040, type: 3}
+    volume: 0.24
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleBossHit1
+    clip: {fileID: 8300000, guid: 89860a23db171435796e7fb44a6f7ea1, type: 3}
+    volume: 0.75
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleBossHit2
+    clip: {fileID: 8300000, guid: 95afe0ded193e41e19a0b16abd9154d0, type: 3}
+    volume: 0.757
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleBossHit3
+    clip: {fileID: 8300000, guid: b33217894657748b9928a5bcd17b1731, type: 3}
+    volume: 0.757
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleBossKill
+    clip: {fileID: 8300000, guid: a87096f13fb4640e497a0fd0620867d4, type: 3}
+    volume: 0.761
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleChargedShot
+    clip: {fileID: 8300000, guid: d4ec0dafaf9bb482b91c1212e7a8a736, type: 3}
+    volume: 0.562
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleChargingDone
+    clip: {fileID: 8300000, guid: e9ee489152eaa466c9ae21367d7d717e, type: 3}
+    volume: 0.231
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleCharging
+    clip: {fileID: 8300000, guid: 7a683e2c74df84b909106a4e9bde29fc, type: 3}
+    volume: 0.238
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleCollectHeart
+    clip: {fileID: 8300000, guid: 93a719a9290274bd3b51328639cbe676, type: 3}
+    volume: 0.757
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleDropApple1
+    clip: {fileID: 8300000, guid: b0351ffad3af24a25a66a61c98feb045, type: 3}
+    volume: 0.28
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleDropApple2
+    clip: {fileID: 8300000, guid: cbce5bf94f2bc4a9ba37738d0e5d21b9, type: 3}
+    volume: 0.298
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleDropApple3
+    clip: {fileID: 8300000, guid: 7fae814cc87dd43459d15cc0af1b6088, type: 3}
+    volume: 0.307
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleDropStone
+    clip: {fileID: 8300000, guid: c8f642bc8cb5849f0867b2ac750478b6, type: 3}
+    volume: 0.146
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleEatApple1
+    clip: {fileID: 8300000, guid: 3ea445fb56c114b5180c1be07ddc7b99, type: 3}
+    volume: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleEatApple2
+    clip: {fileID: 8300000, guid: 6658539f90cf3447ca29432e8d6febf8, type: 3}
+    volume: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleEatApple3
+    clip: {fileID: 8300000, guid: b40c8d777e8da4c19bfc6ee815c8b63d, type: 3}
+    volume: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleHitWater
+    clip: {fileID: 8300000, guid: e3547130528c0419aaf7ed4a1350b2d8, type: 3}
+    volume: 0.297
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleThrowUp
+    clip: {fileID: 8300000, guid: c56691186d5d64a6a9444889bcac8cba, type: 3}
+    volume: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleMusic0b
+    clip: {fileID: 8300000, guid: 5d0391b71edc64c619cd07bc78092040, type: 3}
+    volume: 0.255
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleGhostsDespawn
+    clip: {fileID: 8300000, guid: 56b65e665d1b44d1fa9d6e518b416039, type: 3}
+    volume: 0.75
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleGhostsSpawning
+    clip: {fileID: 8300000, guid: 80f73a6de0c4c46719eb79879cfafc68, type: 3}
+    volume: 0.75
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleMoneyBagDestroy
+    clip: {fileID: 8300000, guid: 054d8837c6669444d9524544b4f943c0, type: 3}
+    volume: 0.75
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleMoneyBagHit1
+    clip: {fileID: 8300000, guid: 04918b2f53a2e45e892b208591a49de0, type: 3}
+    volume: 0.224
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleMoneyBagHit2
+    clip: {fileID: 8300000, guid: 1b468de9259e74b56a077360addbd382, type: 3}
+    volume: 0.208
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleMoneyBagHit3
+    clip: {fileID: 8300000, guid: 011e59d736a794ca8856c141010fa799, type: 3}
+    volume: 0.184
+    loop: 0
+    source: {fileID: 0}
+  audioVolumes: []
