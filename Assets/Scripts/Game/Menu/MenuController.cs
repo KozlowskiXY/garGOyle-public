@@ -47,7 +47,7 @@ public class MenuController : MonoBehaviour
     }
     public void startGame()
     {
-        SceneManager.LoadScene(sceneName: "Level1");
+        SceneManager.LoadScene(sceneName: "CutScene1START1");
     }
     public void gameOverSceneSwitch()
     {
@@ -59,7 +59,19 @@ public class MenuController : MonoBehaviour
     }
     public void resumeGame()
     {
-        SceneManager.LoadScene(sceneBuildIndex: PlayerPrefs.GetInt("lastLevel", 1));
+        switch (PlayerPrefs.GetInt("lastLevel", 1))
+        {
+            case 3:
+                SceneManager.LoadScene("CutScene3START");
+                break;
+            case 2:
+                SceneManager.LoadScene("CutScene2START");
+                break;
+            default:
+                SceneManager.LoadScene("CutScene1START1");
+                break;
+        }
+            
     }
     //*************************************************************************
     private void Start()
