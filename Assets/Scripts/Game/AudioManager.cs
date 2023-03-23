@@ -14,11 +14,15 @@ public class AudioManager : MonoBehaviour
     private int m_maxHealth = 3;
 
     public static AudioManager instance;
-    private const int c_pieceCount = 4;
+    private const int c_pieceCount = 7;
     private const string c_level1 = "Level1";
     private const string c_level2 = "Level2";
     private const string c_level3 = "Level3";
+    private const string c_level4 = "Level4";
+    private const string c_level5 = "Level5";
     private string m_currentSceeneName = "Level1";
+
+    private bool isDistorted = false;
 
 
     //deltaTime doesnt work here
@@ -90,7 +94,7 @@ public class AudioManager : MonoBehaviour
     //find array index of given audio name
     private int getIndexNumber(string name)
     {
-        for (int i = 0; i <= audios.Length; i++)
+        for (int i = 0; i <= audios.Length - 1; i++)
         {
             if (name == audios[i].name) return i;
 
@@ -144,12 +148,18 @@ public class AudioManager : MonoBehaviour
         m_currentSceeneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
         if      (m_currentSceeneName == c_level1 ||
                  m_currentSceeneName == c_level2 ||
-                 m_currentSceeneName == c_level3)
+                 m_currentSceeneName == c_level3 ||
+                 m_currentSceeneName == c_level4 ||
+                 m_currentSceeneName == c_level5
+                 )
         {
           m_pieceNumber =  1 + m_maxHealth - FindObjectOfType<HealthBarController>().getHealth();
+            if (isDistorted) m_pieceNumber += 3;  
+          
+  
 
           //avoids input of 0 Health
-           if(m_pieceNumber > m_maxHealth)
+           if(m_pieceNumber > m_maxHealth + 3)
            {
               m_pieceNumber = 0;
            }
@@ -157,18 +167,26 @@ public class AudioManager : MonoBehaviour
         else
         {
             m_pieceNumber = 0;
+
         }
 
         if (currentMusicStrings[0] == "garGOyleMusic" + m_pieceNumber + "a")
             return;
 
         //Debug.Log("Generated String: " + currentMusicStrings[0]);
+
         pastMusicStrings[0] = currentMusicStrings[0];
         pastMusicStrings[1] = currentMusicStrings[1];
+        
+
+        
         currentMusicStrings[0] = "garGOyleMusic" + m_pieceNumber + "a";
         currentMusicStrings[1] = "garGOyleMusic" + m_pieceNumber + "b";
+
         fadingTime.Restart();
     }
+
+
 
     //plays all next pieces parallel once current music ends
     private void playNextMusic()
@@ -188,10 +206,24 @@ public class AudioManager : MonoBehaviour
 
         for(int m_pieceNumber = 0; m_pieceNumber < c_pieceCount; m_pieceNumber++)
         {
+
+
             Play("garGOyleMusic" + m_pieceNumber + m_endingLetter);
+        
             
+
         }
         musicTime.Restart();
+    }
+
+    public void applyDistortion()
+    {
+        isDistorted = true;
+    }
+
+    public void removeDistortion()
+    {
+        isDistorted = false;
     }
 
 

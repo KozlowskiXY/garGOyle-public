@@ -15,32 +15,59 @@ public class FireButton : MonoBehaviour
     private PlayerShooting player;
     private bool pressed;
     private float timer = 0;
-    
+
+    public InputActionReference actionFire;
+
     [SerializeField]
     private float pressTime = 1; // time to press to trigger charged shot
-    
-    
+
+    private void OnEnable()
+    {
+        actionFire.action.Enable();
+    }
+    private void OnDisable()
+    {
+        actionFire.action.Disable();
+    }
+
     void Start()
     {
         player = GameObject.Find("Player").GetComponent<PlayerShooting>();
         pressed = false;
+        actionFire.action.started += context =>
+        {
+            if ((player.currentStateName == "ChargedState"))
+                FindObjectOfType<AudioManager>().Play("garGOyleCharging");
+            pressed = true;
+        };
+        actionFire.action.canceled += context =>
+        {
+            pressed = false;
+
+            if ((timer > pressTime) && (player.currentStateName == "ChargedState"))
+            {
+                player.ammo = player.chargedFire;
+                FindObjectOfType<AudioManager>().Play("garGOyleChargingDone");
+            }
+            player.fireFire();
+            player.ammo = player.defaultFire;
+            FindObjectOfType<AudioManager>().Stop("garGOyleCharging");
+        };
     }
 
     
     public void OnPointerDown()
     {
-        //Debug.Log("Button pressed");
         if ((player.currentStateName == "ChargedState"))
             FindObjectOfType<AudioManager>().Play("garGOyleCharging");
         pressed = true;
     }
+
     
     // When player leaves button, determine whether shoot default shot or charged shot
     public void OnPointerExit()
     {
-        //Debug.Log("Button exit");
         pressed = false;
-        //Debug.Log(timer);
 
         if ((timer > pressTime) && (player.currentStateName == "ChargedState"))
         {

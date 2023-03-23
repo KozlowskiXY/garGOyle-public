@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 // Displays Button when level is going to end and defeats the endboss
@@ -33,6 +34,7 @@ public class BossDefeatButton : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         button.SetActive(disp);
+        button.GetComponent<Button>().Select();
     }
     
     // Starts event that eliminates the Endboss

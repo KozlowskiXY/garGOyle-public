@@ -12,8 +12,18 @@ public class TutorialState1 : TutorialBaseState
     private float countdown = 1.5f;
     public override void StateEnter(TutorialController tc)
     {
-        tc.textfield.text = "Nutze den Stick auf der rechten Seite, um Sammy zu steuern.\n" +
-                            "Schieße Feuerbälle mit dem Feuerbutton auf der linken Seite.";
+        if(Application.platform == RuntimePlatform.Android)
+        {
+            tc.textfield.text = "Nutze den Stick auf der rechten Seite, um Sammy zu steuern.\n" +
+                                "Schieße Feuerbälle mit dem Feuerbutton auf der linken Seite.";
+        }
+        else
+        {
+            tc.textfield.text = "Nutze die Pfeiltasten oder WASD um Sammy zu steuern.\n" +
+                                "Schieße Feuerbälle mit der Leertaste.\n" +
+                                "Wenn du einen Controller hast, verwende die Sticks und Trigger.";
+        }
+        
         tc.screen.GetComponent<TutorialInstanceScript>().Start();
         player = GameObject.FindWithTag("Player");
         posn = player.transform.position;

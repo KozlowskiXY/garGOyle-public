@@ -235,4 +235,34 @@ MonoBehaviour:
     volume: 0.184
     loop: 0
     source: {fileID: 0}
+  - name: garGOyleMusic4a
+    clip: {fileID: 8300000, guid: b8f3fbfec81344914bf0b78fcc1bee7e, type: 3}
+    volume: 0.101
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleMusic4b
+    clip: {fileID: 8300000, guid: b8f3fbfec81344914bf0b78fcc1bee7e, type: 3}
+    volume: 0.101
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleMusic5a
+    clip: {fileID: 8300000, guid: fa6e47a25620c455995ed01ba6cbde31, type: 3}
+    volume: 0.05
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleMusic5b
+    clip: {fileID: 8300000, guid: fa6e47a25620c455995ed01ba6cbde31, type: 3}
+    volume: 0.05
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleMusic6a
+    clip: {fileID: 8300000, guid: 63cde5514e7004eafb158f5169f6a68b, type: 3}
+    volume: 0.04
+    loop: 0
+    source: {fileID: 0}
+  - name: garGOyleMusic6b
+    clip: {fileID: 8300000, guid: 63cde5514e7004eafb158f5169f6a68b, type: 3}
+    volume: 0.04
+    loop: 0
+    source: {fileID: 0}
   audioVolumes: []

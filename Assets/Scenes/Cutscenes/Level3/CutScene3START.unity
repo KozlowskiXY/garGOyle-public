@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!212 &105315007 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4350959770679285639, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
+  m_PrefabInstance: {fileID: 6182165686544817396}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &263396937
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -180,6 +185,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 141c343dd83cf6e4eb6bc490364e93b1, type: 3}
+--- !u!1 &679817027 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6182165685881926583, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
+  m_PrefabInstance: {fileID: 6182165686544817396}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &930206054 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6182165685828652434, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
+  m_PrefabInstance: {fileID: 6182165686544817396}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1487105277
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,36 +224,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b385692562e54241978bd6414b882be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1874413030}
-  dialogtext: {fileID: 1874413029}
+  dialogtext: {fileID: 1960356575}
+  SpeakerHead: {fileID: 105315007}
   dialog:
-  - text: "Samy fliegt immer weiter als er auf einen Wasserspeier trifft, der ihn
-      sehr an den Mann mit Kapuze und Krug erinnert. \u201EHallo?\u201C, fragt er
-      vorsichtig. Vielleicht ist dieser Wasserspeier je ein Freund von dem anderen?"
-    clip: {fileID: 8300000, guid: 3c153ec9a5eab45469a83b866cb8a28c, type: 3}
-    volume: 0.73
-  - text: "\u201EDu wirkst wie Einer, der was will. Alle wollen was: Spenden f\xFCr
-      Menschen in Not, Hilfe f\xFCr kranke Kinder oder Mittel, um den Regenwald zu
-      retten \u2013 alle wollen was. Aber ich geben nichts! Keinen Cent und wenn
-      ich davon sterbe! Ich gebe niemanden was und erst recht nicht dir!\u201C"
-    clip: {fileID: 8300000, guid: 95760c7d5739ad54aafeda02b985b13f, type: 3}
-    volume: 0.556
-  - text: "\u201EIch m\xF6chte nur in die Kirche.\u201C, erkl\xE4rt Samy und hofft
-      doch noch eine friedliche L\xF6sung zu finden."
-    clip: {fileID: 8300000, guid: f8186b24461a0684396785dde9278d7f, type: 3}
-    volume: 0.461
-  - text: "\u201EAch, du bist der kleine D\xE4mon, von dem mir Zorn erz\xE4hlt hat.
-      Er ist ganz sch\xF6n w\xFCtend wegen dir \u2013 andererseits ist er immer zornig.
-      Darum ist er ja auch der Zorn. Ich bin der Geiz. Ich gebe nichts und will alles.
-      Wenn ich dich besiege, dann schulden mir die anderen was. Es ist schade um
-      meine sch\xF6nen Gelds\xE4cke, aber was muss das muss.\u201C Der gierige Glanz
-      in den Augen des Wasserspeiers macht Samy klar, dass er keine Wahl hat als
-      sich auch diesem Gegner zu stellen."
-    clip: {fileID: 8300000, guid: 9d7803694d1dbed4c9a82e9a8255f902, type: 3}
-    volume: 0.461
+  - text: "Samy trifft einen anderen Wasser-Speier. Dieser Wasser-Speier ist \xE4hnlich
+      wie der Mann mit Kapuze und Krug. Vielleicht ist dieser Wasser-Speier ja ein
+      Freund von dem anderen? Samy fragt vorsichtig: Hallo? "
+    speaker: {fileID: 21300000, guid: 39c28f194207c6a47ae087b6973cce3c, type: 3}
+  - text: "Dieser Wasser-Speier sagt: Willst du etwas? Alle Menschen wollen was: 
+      Spenden f\xFCr Menschen in Not  Hilfe f\xFCr kranke Kinder oder  den Wald retten
+      \u2013  alle wollen was.  Aber ich gebe <b>nichts</b>!  <b>Keinen Cent</b> 
+      und wenn ich davon sterbe.  Ich gebe <b>niemandem</b> was. Dir gebe ich erst
+      recht <b>nichts</b>. "
+    speaker: {fileID: 21300000, guid: 60fc7603a1d96cf439f432654060a545, type: 3}
+  - text: "Samy sagt: Ich m\xF6chte nur in die Kirche. Samy m\xF6chte <b>nicht</b>
+      streiten. Samy m\xF6chte eine friedliche L\xF6sung finden. "
+    speaker: {fileID: 21300000, guid: 39c28f194207c6a47ae087b6973cce3c, type: 3}
+  - text: "Der Wasser-Speier sagt: Ach, du bist der kleine D\xE4mon.  Der Wasserspeier
+      des Zorns hat mir von dir erz\xE4hlt.  Er ist ganz sch\xF6n w\xFCtend wegen
+      dir. Aber eigentlich ist er immer zornig.  Darum ist er ja auch der Zorn. 
+      Ich bin der Wasser-Speier des Geiz.  "
+    speaker: {fileID: 21300000, guid: 60fc7603a1d96cf439f432654060a545, type: 3}
+  - text: "Ich gebe <b>nichts</b>.  Und ich will alles.  Wenn ich dich besiege, 
+      dann m\xFCssen die anderen mir was geben. Es ist schade um meine sch\xF6nen
+      Geld-S\xE4cke,  aber es muss sein.  Die Augen von dem Wasser-Speier gl\xE4nzen
+      gierig. "
+    speaker: {fileID: 21300000, guid: 60fc7603a1d96cf439f432654060a545, type: 3}
+  - text: "Samy versteht: Er muss auch mit diesem Wasser-Speier k\xE4mpfen. "
+    speaker: {fileID: 21300000, guid: 39c28f194207c6a47ae087b6973cce3c, type: 3}
   nextscene: Level3
-  transition_bg: {fileID: 1874413028}
-  transition_sammy: {fileID: 1874413027}
+  transition_bg: {fileID: 679817027}
+  transition_sammy: {fileID: 930206054}
 --- !u!4 &1487105279
 Transform:
   m_ObjectHideFlags: 0
@@ -254,17 +270,140 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1874413026
+--- !u!114 &1960356575 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6182165684743861803, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
+  m_PrefabInstance: {fileID: 6182165686544817396}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &2061915765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2061915768}
+  - component: {fileID: 2061915767}
+  - component: {fileID: 2061915769}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2061915767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061915765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 6182165686544817397}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &2061915768
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061915765}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2061915769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061915765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
+--- !u!1001 &6182165686544817396
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5900951214925322693, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 5f9e3e4fd0330da45aa86c2adfb4271b, type: 3}
+    - target: {fileID: 2159192396171710515, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159192396171710515, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159192396171710515, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159192396171710515, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -710
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159192396171710515, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -310
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159192396171710515, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159192396171710515, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350959770679285639, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350959770679285639, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5270695615200234122, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6182165684759716385, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -357,118 +496,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1487105278}
-    - target: {fileID: 6182165685313607172, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SkipLine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6182165685313607172, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: DialogController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449320006020916346, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 160
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449320006020916346, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 160
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449320006020916346, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 160
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
---- !u!1 &1874413027 stripped
+--- !u!1 &6182165686544817397 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 6182165685828652434, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
-  m_PrefabInstance: {fileID: 1874413026}
+  m_CorrespondingSourceObject: {fileID: 6182165685313607194, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
+  m_PrefabInstance: {fileID: 6182165686544817396}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1874413028 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6182165685881926583, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
-  m_PrefabInstance: {fileID: 1874413026}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1874413029 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6182165684743861803, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
-  m_PrefabInstance: {fileID: 1874413026}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!82 &1874413030 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 6182165684759716386, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
-  m_PrefabInstance: {fileID: 1874413026}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2061915765
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2061915768}
-  - component: {fileID: 2061915767}
-  - component: {fileID: 2061915766}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2061915766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2061915765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &2061915767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2061915765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
---- !u!4 &2061915768
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2061915765}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

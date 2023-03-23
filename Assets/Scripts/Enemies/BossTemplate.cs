@@ -161,10 +161,10 @@ public class BossTemplate : MonoBehaviour
     }
 
     // Shrinks Boss and when to small, eliminate him :(
-    protected void shrink(string nextscene)
+    public void shrink(string nextscene)
     {
         float scaleX = tr.localScale.x;
-        if (scaleX <= 1)
+        if (scaleX <= 0.5f)
         {
             SceneManager.LoadScene(nextscene);
         }

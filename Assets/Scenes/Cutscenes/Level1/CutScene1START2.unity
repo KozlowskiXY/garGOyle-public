@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!212 &105315007 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4350959770679285639, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
+  m_PrefabInstance: {fileID: 6182165686544817396}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &263396937
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -180,6 +185,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 141c343dd83cf6e4eb6bc490364e93b1, type: 3}
+--- !u!1 &679817027 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6182165685881926583, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
+  m_PrefabInstance: {fileID: 6182165686544817396}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &930206054 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6182165685828652434, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
+  m_PrefabInstance: {fileID: 6182165686544817396}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1487105277
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,51 +224,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b385692562e54241978bd6414b882be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1676631834}
-  dialogtext: {fileID: 1676631833}
+  dialogtext: {fileID: 1960356575}
+  SpeakerHead: {fileID: 105315007}
   dialog:
-  - text: '"Hallo!", sagt der Wasserspeier freundlich. '
-    clip: {fileID: 8300000, guid: 438ca9ad9d548b446b99fcb2f4cb442b, type: 3}
-    volume: 0.461
-  - text: "Samy ist verwirrt. Normalerweise sind Wasserspeier gemein zu D\xE4monen. 
-      \u201EHallo, sprichst du mit mir?\u201C, fragt Samy vorsichtig. "
-    clip: {fileID: 8300000, guid: 11f8a00011db29848b0967493bef8409, type: 3}
-    volume: 0.461
-  - text: "\u201CJa, Kleiner, ich spreche mit dir. Interessiert dich das M\xFCnster?\u201D "
-    clip: {fileID: 8300000, guid: 60a1d630fe6dcf84e966d0a5bfaec725, type: 3}
-    volume: 0.461
-  - text: "\u201CJa. Mein Name ist Samy. Die Meschen sagen: Die Kirche ist sch\xF6n.
-      Ich m\xF6chte sie gerne besuchen.\u201D"
-    clip: {fileID: 8300000, guid: 6b2186ccd06e4f947a8d94b5d7ca939a, type: 3}
-    volume: 0.461
-  - text: "\u201CDiese Kirche ist f\xFCr Katholiken ein heiliger Ort. D\xE4monen
-      d\xFCrfen dort nicht hinein. Weil das M\xFCnster eine ganz besondere Kirche
-      ist, hat sie 91 Wasserspeier. Aber es gibt einen anderen Weg. Aber der kann
-      gef\xE4hrlich sein.\u201D "
-    clip: {fileID: 8300000, guid: 7308ee80cb6892c4db9393b9bd696755, type: 3}
-    volume: 0.461
-  - text: "\u201CBitte, bitte. Ich bin ein guter D\xE4mon. Ich habe nie einen Menschen
-      verletzt. Ich m\xF6chte kein D\xE4mon sein! Die H\xF6lle ist dunkel und gruselig.
-      Aber diese Kirche ist so sch\xF6n hell. Ich werde tun, was du mir sagst.\u201D"
-    clip: {fileID: 8300000, guid: 492352707f543084e927096cdc85130b, type: 3}
-    volume: 0.461
-  - text: "Der Wasserspeier l\xE4chelt. \u201ENa gut, Kleiner, ich verrate es dir:
-      Kennst du die sieben Tods\xFCnden? Sie sind Neid, Faulheit, Gefr\xE4\xDFigkeit,
-      Zorn, Lust, Geiz und Stolz. F\xFCnf von ihnen leben hier oben bei mir. Sie
-      werden dich herausfordern, dich verf\xFChren und dich beschimpfen. Besieg sie
-      und zeig, dass du meine Hilfe verdienst. Verstehst du?\u201C "
-    clip: {fileID: 8300000, guid: 0c5f910e054e17741b7a00993021eed8, type: 3}
-    volume: 0.461
-  - text: "Samy war gl\xFCcklich, dass es eine M\xF6glichkeit gibt in die Kirche
-      zu kommen. \u201EJa! Ich verstehe! Vertrau mir, ich schaffe das! Vielen Dank!\u201D"
-    clip: {fileID: 8300000, guid: f49a3f7d7740d4a47808422f207eef85, type: 3}
-    volume: 0.461
-  - text: "\u201EDann flieg weiter. Aber sei vorsichtig!\u201D"
-    clip: {fileID: 8300000, guid: 051a0fcec1285f8418b35fe8e885a924, type: 3}
-    volume: 0.461
+  - text: 'Der Wasser-Speier sagt freundlich: Hallo. '
+    speaker: {fileID: 21300000, guid: 09c6eb40e72119845b043f5f83903282, type: 3}
+  - text: "Das verwirrt Samy.  Normalerweise sind Wasser-Speier gemein zu D\xE4monen.  
+      Samy fragt vorsichtig: Hallo. Sprichst du mit mir? "
+    speaker: {fileID: 21300000, guid: 39c28f194207c6a47ae087b6973cce3c, type: 3}
+  - text: 'Der Wasser-Speier sagt: Ja, Kleiner, ich spreche mit dir.  Interessiert
+      dich die Kirche? '
+    speaker: {fileID: 21300000, guid: 09c6eb40e72119845b043f5f83903282, type: 3}
+  - text: "Samy sagt: Ja.  Mein Name ist Samy.  Die Menschen sagen:  Die Kirche ist
+      sch\xF6n.  Ich m\xF6chte die Kirche gerne besuchen. "
+    speaker: {fileID: 21300000, guid: 39c28f194207c6a47ae087b6973cce3c, type: 3}
+  - text: "Der Wasser-Speier sagt: Diese Kirche ist f\xFCr Katholiken ein heiliger
+      Ort.  D\xE4monen d\xFCrfen dort <b>nicht</b> hinein.  Es ist eine ganz besondere
+      Kirche. Deshalb hat die Kirche 91 Wasser-Speier.  Aber es gibt einen anderen
+      Weg.  Aber der kann gef\xE4hrlich sein. "
+    speaker: {fileID: 21300000, guid: 09c6eb40e72119845b043f5f83903282, type: 3}
+  - text: "Samy sagt: Bitte, bitte.  Ich bin ein guter D\xE4mon.  Ich habe <b>nie</b>
+      einen Menschen verletzt.  Ich m\xF6chte <b>kein</b> D\xE4mon sein.  Die H\xF6lle
+      ist dunkel und gruselig.  Aber diese Kirche ist so sch\xF6n hell.  Ich tue, 
+      was du mir sagst. "
+    speaker: {fileID: 21300000, guid: 39c28f194207c6a47ae087b6973cce3c, type: 3}
+  - text: "Der Wasser-Speier l\xE4chelt.  Na gut, Kleiner.  Ich verrate es dir. 
+      Kennst du die 7 Tod-S\xFCnden?  Das sind besonders b\xF6se Taten. Sie sind
+      Neid, Faulheit, Gefr\xE4\xDFigkeit, Zorn, Lust, Geiz und Stolz."
+    speaker: {fileID: 21300000, guid: 09c6eb40e72119845b043f5f83903282, type: 3}
+  - text: "  5 von ihnen leben hier oben bei mir.  Sie werden dich herausfordern.
+      Sie werden dich verf\xFChren.  Sie werden dich beschimpfen.  Du musst Sie besiegen.
+      Damit zeigst du: Du verdienst meine Hilfe. Verstehst du das? "
+    speaker: {fileID: 21300000, guid: 09c6eb40e72119845b043f5f83903282, type: 3}
+  - text: "Samy ist gl\xFCcklich. So kann er in die Kirche kommen. Samy sagt:  Ja! 
+      Ich verstehe.  Vertrau mir.  Ich schaffe das. "
+    speaker: {fileID: 21300000, guid: 39c28f194207c6a47ae087b6973cce3c, type: 3}
+  - text: 'Der Wasser-Speier sagt: Flieg weiter.  Aber sei vorsichtig. '
+    speaker: {fileID: 21300000, guid: 09c6eb40e72119845b043f5f83903282, type: 3}
   nextscene: CutScene1START3
-  transition_bg: {fileID: 1676631832}
-  transition_sammy: {fileID: 1676631831}
+  transition_bg: {fileID: 679817027}
+  transition_sammy: {fileID: 930206054}
 --- !u!4 &1487105279
 Transform:
   m_ObjectHideFlags: 0
@@ -269,17 +279,140 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1676631830
+--- !u!114 &1960356575 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6182165684743861803, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
+  m_PrefabInstance: {fileID: 6182165686544817396}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &2061915765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2061915768}
+  - component: {fileID: 2061915767}
+  - component: {fileID: 2061915769}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2061915767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061915765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 6182165686544817397}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &2061915768
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061915765}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2061915769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061915765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
+--- !u!1001 &6182165686544817396
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5900951214925322693, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 7bafbf268c44348468f29c207a53a54c, type: 3}
+    - target: {fileID: 2159192396171710515, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159192396171710515, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159192396171710515, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159192396171710515, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -710
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159192396171710515, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -310
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159192396171710515, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159192396171710515, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350959770679285639, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350959770679285639, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5270695615200234122, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6182165684759716385, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -372,126 +505,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1487105278}
-    - target: {fileID: 6182165685313607172, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SkipLine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6182165685313607172, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: DialogController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6182165685828652435, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -2000
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449320006020916346, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 77.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449320006020916346, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 77.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449320006020916346, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 77.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449320006020916346, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -53
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
---- !u!1 &1676631831 stripped
+--- !u!1 &6182165686544817397 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 6182165685828652434, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
-  m_PrefabInstance: {fileID: 1676631830}
+  m_CorrespondingSourceObject: {fileID: 6182165685313607194, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
+  m_PrefabInstance: {fileID: 6182165686544817396}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1676631832 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6182165685881926583, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
-  m_PrefabInstance: {fileID: 1676631830}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1676631833 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6182165684743861803, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
-  m_PrefabInstance: {fileID: 1676631830}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!82 &1676631834 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 6182165684759716386, guid: c5e48a7b0c81e69439576c069a88e30a, type: 3}
-  m_PrefabInstance: {fileID: 1676631830}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2061915765
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2061915768}
-  - component: {fileID: 2061915767}
-  - component: {fileID: 2061915766}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2061915766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2061915765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &2061915767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2061915765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
---- !u!4 &2061915768
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2061915765}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

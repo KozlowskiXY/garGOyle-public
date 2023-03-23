@@ -8,7 +8,7 @@ public class MenuLevel3State : MenuBaseState
 {
     public override void RightState(MenuController menu)
     {
-
+        menu.state = menu.level4;
     }
     public override void LeftState(MenuController menu)
     {

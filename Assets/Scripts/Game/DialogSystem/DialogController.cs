@@ -6,47 +6,34 @@ using System.Collections;
 //by Frieder
 public class DialogController : MonoBehaviour
 {
-    public AudioSource player;
+    
     public TextMeshProUGUI dialogtext;
+    public SpriteRenderer SpeakerHead;
     public DialogLine[] dialog;
     public string nextscene;
     private int currentline = 0;
+    private bool notLoading = true;
 
-
-    private void PlayNextLine()
-    {
-        if(currentline < dialog.Length)
-        {
-            player.Stop();
-            player.clip = dialog[currentline].clip;
-            player.Play();
-            dialogtext.text = dialog[currentline].text;
-            currentline++;
-        }        
-    }
+    
     public void SkipLine()
     {
-        if (currentline == dialog.Length)
+        if (currentline >= dialog.Length)
         {
-            player.Stop();
-            StartCoroutine(PlayTransition());
+            if(notLoading)
+            {
+                StartCoroutine(PlayTransition());
+                notLoading= false;
+            } 
         }
         else
         {
-            PlayNextLine();
+            dialogtext.text = dialog[currentline].text;
+            SpeakerHead.sprite = dialog[currentline].speaker;
+            currentline++;
+           
         }
     }
-    void Update()
-    {
-        if (player.isPlaying)
-        {
-            return;
-        }
-        else
-        {
-            PlayNextLine();
-        }
-    }
+    
     //=========================================================================
     //Code for scene transition
     public GameObject transition_bg;
@@ -72,5 +59,6 @@ public class DialogController : MonoBehaviour
     private void Start()
     {
         sammy_anim = transition_sammy.GetComponent<Animator>();
+        SkipLine();
     }
 }

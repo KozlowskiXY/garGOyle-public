@@ -18,6 +18,10 @@ public class MenuController : MonoBehaviour
     public MenuLevel1State level1 = new();
     public MenuLevel2State level2 = new();
     public MenuLevel3State level3 = new();
+    public MenuLevel4State level4 = new();
+    public MenuLevel5State level5 = new();
+
+    public Button AchievementBackbutton;
 
     public void LeftLevel()
     {
@@ -43,6 +47,7 @@ public class MenuController : MonoBehaviour
         else
         {
             achievementscreen.GetComponent<AchievementScreenController>().ShowAchievements(state.achievements_string);
+            AchievementBackbutton.Select();
         }
     }
     public void startGame()
@@ -59,8 +64,11 @@ public class MenuController : MonoBehaviour
     }
     public void resumeGame()
     {
-        switch (PlayerPrefs.GetInt("lastLevel", 1))
+        switch (PlayerPrefs.GetInt("maxLevel", 1))
         {
+            case 4:
+                SceneManager.LoadScene("CutScene4START");
+                break;
             case 3:
                 SceneManager.LoadScene("CutScene3START");
                 break;

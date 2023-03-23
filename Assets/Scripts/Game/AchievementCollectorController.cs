@@ -47,6 +47,16 @@ public class AchievementCollectorController : MonoBehaviour
                 alive = boss.GetComponent<BossLevel3>().isAlive;
                 level = 3;
             }
+            else if (boss.GetComponent<BossLevel4>() != null)
+            {
+                alive = boss.GetComponent<BossLevel4>().isAlive;
+                level = 4;
+            }
+            else if (boss.GetComponent<BossLevel5>() != null)
+            {
+                alive = boss.GetComponent<BossLevel5>().isAlive;
+                level = 5;
+            }
             else
             {
                 Debug.LogError("Connect Boss to AchievementCollector");

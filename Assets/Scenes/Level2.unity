@@ -736,6 +736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e4350e38cd2b6ad48b4c20fd455dfe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actionFire: {fileID: 2759861475160808691, guid: 53d370d628c8da3499d99bbdcfbd604e, type: 3}
   pressTime: 1
 --- !u!114 &598637575
 MonoBehaviour:
@@ -1621,6 +1622,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6279643028852994721, guid: 2993ec9fc75acab48a55346cdcde9419, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5294118
+      objectReference: {fileID: 0}
+    - target: {fileID: 6279643028852994721, guid: 2993ec9fc75acab48a55346cdcde9419, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5921569
+      objectReference: {fileID: 0}
+    - target: {fileID: 6279643028852994721, guid: 2993ec9fc75acab48a55346cdcde9419, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6784314
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2993ec9fc75acab48a55346cdcde9419, type: 3}
 --- !u!1 &1896653094 stripped
@@ -1770,8 +1783,8 @@ PrefabInstance:
       objectReference: {fileID: 1896653095}
     - target: {fileID: 6635304410593337398, guid: cec9d28d2c1c59d47bf402dc028eb57c, type: 3}
       propertyPath: m_text
-      value: "Sammle \xC4pfel,\num deine Attacke aufzuladen.\nTreffe den Boss mit
-        geladenen Sch\xFCssen\num zu gewinnen!"
+      value: "Sammle \xC4pfel,\num deine Attacke aufzuladen.\nTreffe dann den Boss
+        mit geladenen Sch\xFCssen\n(Attacke gedr\xFCckt halten)\num zu gewinnen!"
       objectReference: {fileID: 0}
     - target: {fileID: 6635304410593337398, guid: cec9d28d2c1c59d47bf402dc028eb57c, type: 3}
       propertyPath: m_VerticalAlignment

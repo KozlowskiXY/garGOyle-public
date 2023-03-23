@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     Rigidbody rigbod;
 
     [SerializeField]
-    private float speedfaktor;//Player movement speed
+    public float speedfaktor;//Player movement speed
 
     private Vector2 movement = new Vector2(0, 0);//Input values of player movement
 
@@ -139,7 +139,7 @@ public class Player : MonoBehaviour
 
     }
 
-    private IEnumerator hitCooldownVis()
+    public IEnumerator hitCooldownVis()
     {   
         //Debug.Log("Mulm");
         shooting.playerColor = Color.red;
@@ -251,8 +251,28 @@ public class Player : MonoBehaviour
         holdsMoneyBag = isHoldingMoneyBag;
     }
 
+    private float timer = 0;
+    [SerializeField]
+    private float effectTime = 5;
+    public bool effectStart = false;
+    private float defaultSpeed = 0.5f;
+    void resetSpeed()
+    {
+        if (timer > effectTime)
+        {
+            speedfaktor = defaultSpeed;
+            timer = 0;
+            effectStart = false;
+        }
+    }
     private void Update()
     {
+        if (effectStart)
+        {
+            timer += Time.deltaTime;
+            resetSpeed();
+        }
+        
         m_explosionIntervalTime += Time.deltaTime;
         if (SceneManager.GetActiveScene().name == "Level2")
         {

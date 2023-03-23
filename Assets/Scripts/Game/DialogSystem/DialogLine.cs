@@ -5,7 +5,5 @@ using UnityEngine.Audio;
 public class DialogLine
 {
     public string text;
-    public AudioClip clip;
-    [Range(0f, 1f)]
-    public float volume;
+    public Sprite speaker;
 }

@@ -94,7 +94,7 @@ public class PlayerShooting : MonoBehaviour
     void Start()
     {
         currentState = fireStateLvl1;
-        if (SceneManager.GetActiveScene().name == "Level2" || SceneManager.GetActiveScene().name == "Level3" || SceneManager.GetActiveScene().name == "TutorialLevel")
+        if (SceneManager.GetActiveScene().name == "Level5" || SceneManager.GetActiveScene().name == "Level2" || SceneManager.GetActiveScene().name == "Level3" || SceneManager.GetActiveScene().name == "TutorialLevel")
         {
             renderer = sammy.GetComponent<SpriteRenderer>();
             currentState = fireState;

@@ -10,6 +10,7 @@ public class WaterBar : MonoBehaviour
     private const float c_colorFlashingDuration = 20f;
     private float m_colorTime = 0;
     private bool isBlue = true;
+    private string m_currentSceeneName = "Level1";
 
     private const int c_fillSpeed = 1;
     private const int c_reduceAmount = 20;
@@ -71,6 +72,29 @@ public class WaterBar : MonoBehaviour
 
     }
 
+    public void growWaterLevelBy(float x)
+    {
+        if (getWaterLevel() + x < c_maxWaterLevel)
+        {
+            this.transform.localScale += new Vector3(0, x, 0);
+            this.transform.position += new Vector3(0, x * 0.25f, 0);
+        }
+        else
+        {
+            while(getWaterLevel() < c_maxWaterLevel)
+            {
+                this.transform.localScale += new Vector3(0, 1, 0);
+                this.transform.position += new Vector3(0, 1 * 0.25f, 0);
+
+                if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Level4")
+                {
+                    FindObjectOfType<Rose>().defeatBoss();
+                }
+            }
+        }
+
+    }
+
     public void grow()
     {
         if (getWaterLevel() < c_maxWaterLevel)
@@ -85,12 +109,17 @@ public class WaterBar : MonoBehaviour
     {
         m_colorTime = m_colorTime + Time.deltaTime;
 
-
+        
         if (getWaterLevel() >= c_reduceAmount && m_colorTime > c_colorFlashingDuration / (getWaterLevel() *2 )&& isBlue)
         {
-            m_colorTime = 0;
-            isBlue = false;
-            ma.color = Color.green;
+            m_currentSceeneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+            if (m_currentSceeneName != "Level4" || m_currentSceeneName != "Level5" || getWaterLevel() > c_maxWaterLevel - 1)
+            {
+                m_colorTime = 0;
+                isBlue = false;
+                ma.color = Color.green;
+            }
+            
         }
         else if(getWaterLevel() >= c_reduceAmount && m_colorTime > c_colorFlashingDuration / (getWaterLevel() *2 )&& !isBlue)
         {

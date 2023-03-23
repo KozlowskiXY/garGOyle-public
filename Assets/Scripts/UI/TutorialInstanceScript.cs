@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 //by Frieder
 public class TutorialInstanceScript : MonoBehaviour
 {
     public GameObject[] cameras;
+    public Button SkipButton;
     public void Start()
     {
         Time.timeScale = 0f;
@@ -12,6 +14,7 @@ public class TutorialInstanceScript : MonoBehaviour
         {
             cam.SetActive(false);
         }
+        SkipButton.Select();
     }
     public void EndTutorial()
     {

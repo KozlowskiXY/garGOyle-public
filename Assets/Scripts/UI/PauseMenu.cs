@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 //by Frieder
@@ -14,7 +15,11 @@ public class PauseMenu : MonoBehaviour
     GameObject pausebutton;
     [SerializeField]
     GameObject storage;
-    
+    [SerializeField]
+    Button SelectButton;
+
+    public InputActionReference actionPause;
+
     public void PauseTheGame()
     {
         gameObject.SetActive(true);
@@ -22,6 +27,7 @@ public class PauseMenu : MonoBehaviour
         firebutton.SetActive(false);
         pausebutton.SetActive(false);
         Time.timeScale = 0.0f;
+        SelectButton.Select();
     }
     public void ResumeTheGame()
     {
@@ -43,5 +49,11 @@ public class PauseMenu : MonoBehaviour
     void Start()
     {
         gameObject.SetActive(false);
+        actionPause.action.started += context =>
+        {
+            if(Time.timeScale >= 1.0f) {
+                PauseTheGame();
+            }
+        };
     }
 }

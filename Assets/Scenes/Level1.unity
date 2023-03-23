@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.37311915, g: 0.3807396, b: 0.35872662, a: 1}
+  m_IndirectSpecularColor: {r: 0.3708985, g: 0.3783704, b: 0.35722548, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.6666667}
+  m_Color: {r: 0.6784314, g: 0.5921569, b: 0.5294118, a: 0.6666667}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -404,7 +404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6784314, g: 0.5921569, b: 0.5294118, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -568,6 +568,8 @@ MonoBehaviour:
   firebutton: {fileID: 753713056}
   pausebutton: {fileID: 308972143}
   storage: {fileID: 1682665128}
+  SelectButton: {fileID: 875114127}
+  actionPause: {fileID: -5467649455422220235, guid: 53d370d628c8da3499d99bbdcfbd604e, type: 3}
 --- !u!114 &342343669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -702,6 +704,7 @@ MonoBehaviour:
   firebutton: {fileID: 753713056}
   pausebutton: {fileID: 308972143}
   storage: {fileID: 1682665128}
+  SelectButton: {fileID: 1732646578}
 --- !u!1 &413848424
 GameObject:
   m_ObjectHideFlags: 0
@@ -1175,6 +1178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e4350e38cd2b6ad48b4c20fd455dfe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actionFire: {fileID: 2759861475160808691, guid: 53d370d628c8da3499d99bbdcfbd604e, type: 3}
   pressTime: 1
 --- !u!114 &753713063
 MonoBehaviour:
@@ -1487,7 +1491,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.59607846, g: 0.59607846, b: 0.59607846, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1532,7 +1536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6784314, g: 0.5921569, b: 0.5294118, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1709,7 +1713,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Wait before firing
+  m_Text: "Au\xDFer Atem..."
 --- !u!222 &1014646806
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1875,7 +1879,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.59607846, g: 0.59607846, b: 0.59607846, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1920,7 +1924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6784314, g: 0.5921569, b: 0.5294118, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2147,9 +2151,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.6784314, g: 0.5921569, b: 0.5294118, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.6784314, g: 0.5921569, b: 0.5294118, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2194,7 +2198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6784314, g: 0.5921569, b: 0.5294118, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2363,7 +2367,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.59607846, g: 0.59607846, b: 0.59607846, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2408,7 +2412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6784314, g: 0.5921569, b: 0.5294118, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2662,6 +2666,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1748104203055974613, guid: cec9d28d2c1c59d47bf402dc028eb57c, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5294118
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748104203055974613, guid: cec9d28d2c1c59d47bf402dc028eb57c, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5921569
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748104203055974613, guid: cec9d28d2c1c59d47bf402dc028eb57c, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6784314
+      objectReference: {fileID: 0}
     - target: {fileID: 5412601142020604397, guid: cec9d28d2c1c59d47bf402dc028eb57c, type: 3}
       propertyPath: m_Name
       value: Tutorial
@@ -3231,6 +3247,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7440554038921983809, guid: 78f214c6d24c8f34082b87371c5770bf, type: 3}
+      propertyPath: m_FirstSelected
+      value: 
+      objectReference: {fileID: 1266280445}
     - target: {fileID: 7440554038921983815, guid: 78f214c6d24c8f34082b87371c5770bf, type: 3}
       propertyPath: m_Name
       value: EventSystem
